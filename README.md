@@ -1,1 +1,32 @@
 # QuickDict
+
+- Hero Header: Project title, logo/icon banner reference, concise tagline.
+- Shields & Badges: Platform (Windows 10 / 11), Language (C++20), Subsystem (Win32 GUI), Binary Size (~375 KB), License (MIT).
+- Overview: What QuickDict is — an ultra-lightweight, zero-bloat desktop translator activated anywhere via global hotkey (Win + Shift + Q).
+- Key Features:
+- Zero Bloat & Instant Startup: Built in pure C++20 and Win32 API. No Electron, no Python runtime, no .NET dependencies. Memory footprint under 10 MB.
+- Dual Translation Engines:
+- Google Translate: Zero-config, free, no API key required.
+- OpenRouter AI: Access to LLMs (DeepSeek-R1, Gemini 2.5 Flash, Claude 3.5, Llama 3, etc.).
+- Automatic Fallback Mechanism: Seamlessly falls back to OpenRouter if Google Translate fails or gets rate-limited.
+- Chain-of-Thought (Reasoning) Support: Toggle model thinking process with a single click inside the overlay.
+- Smart Overlay UI: Dark theme, auto-fitting dimensions, timer pause on mouse hover, quick close button (x), smooth mouse-wheel scrolling.
+- System Tray Integration: Custom system tray icon, background execution, tray context menu (Settings / Exit).
+- Security & Privacy First: API keys encrypted in Windows Credential Manager (CredWriteW), no telemetry, no secrets leaked in logs or config files.
+- How to Use:
+- Global hotkey usage: select text in any app (browser, code editor, PDF, messenger) and press Win + Shift + Q.
+- Mouse hover interaction: timer pauses while cursor is over the overlay.
+- Tray icon actions: right-click for quick actions, double-click for settings.
+- Installation & Releases:
+- Download standalone package from GitHub Releases (QuickDict_Release.zip).
+- Run via QuickDict.exe or RUN.bat.
+- Configuration via SETTINGS.bat or tray menu.
+- Clean uninstallation via UNINSTALL.bat.
+- Building from Source:
+- Prerequisites (MSVC x64 or Visual Studio Build Tools 2022+).
+- One-click build with build.bat.
+- CMake workflow (cmake -B build -> cmake --build build --config Release).
+- Configuration Reference:
+- Explanation of all fields in config.json (target_language, provider, model, max_chars, request_timeout, display_timeout, openrouter_fallback, autostart, reasoning_requested).
+- Security & Privacy Statement: Local encryption, no data collection.
+- License: MIT License.
